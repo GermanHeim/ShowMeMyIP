@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style.css">
+   <title>Show me my IP</title>
+   <link rel='icon' type='image/png' href='Assets/favicon.png'>
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+   <script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+</head>
+<body>
+
+<script> 
+   $.getJSON("https://api.ipgeolocation.io/ipgeo?apiKey=YOUR_API_KEY", 
+      function(data) { 
+      $("#ip").html(data.ip);
+      $("#country_name").html(data.country_name);
+      $("#city").html(data.city);
+      $("#state_prov").html(data.state_prov);  
+      $("#service_provider").html(data.isp); 
+   }) 
+</script>
+<div id="particles-js">
+   <div class="header">
+      <h1>Welcome to <span style="color: #FF0266">Show me my IP!</span></h1>
+   </div>
+
+   <div id="container">
+      <h2>IP:&nbsp;</h2><h2 id="ip"></h2> 
+      </br>
+      <h3><strong>Location:</strong>&nbsp;</h3><h3 id="city"></h3><h3>, </h3>
+      <h3 id=state_prov></h3><h3>, </h3>
+      <h3 id=country_name></h3><h3>.</h3>
+      </br>
+      <h3><strong>Service Provider:</strong>&nbsp;</h3><h3 id="service_provider"></h3>
+   </div>
+
+   <div id="footer">
+      <h4 style="margin-top: 20px;">This site uses the <a href="https://ipgeolocation.io/">Geolocation API</a></h4>
+   </br>
+      <h4 style="display: inline-block; margin-bottom: 20px;">Made by <a href="https://github.com/GermanHeim">Germán Heim</h4>
+      <i class="fab fa-github icons"></i></a>
+   </div>
+</div>
+
+<script type="text/javascript" src="js/particles.min.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+<script src="js/fontawesome.js"></script>
+</body>
+</html>
