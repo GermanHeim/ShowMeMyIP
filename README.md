@@ -7,4 +7,4 @@ It also has Particles.JS for the background and FontAwesome for the icons (You w
 
 ![ShowMeMyIP](https://i.imgur.com/V6LgLOt.png)
 
-PS: The data of the foto is *obviously* fake.
+*PS:* The data of the photo is *obviously* fake.
